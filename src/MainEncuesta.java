@@ -12,7 +12,7 @@ public class MainEncuesta {
 
         for (int i = 1; i < 6; i++) {
 
-            System.out.println("Inscripción:" + i);
+            System.out.println("Inscripción: " + i);
 
             System.out.println("Ingrese su nombre: ");
             String nombre = (scanner.nextLine());
@@ -20,8 +20,16 @@ public class MainEncuesta {
             System.out.println("Ingrese su apellido: ");
             String apellido = (scanner.nextLine());
 
-            System.out.println("Ingrese su genero: ");
+            System.out.println("Ingrese su genero (M/F): ");
             String genero = (scanner.nextLine());
+            while(true){
+                if(genero.equalsIgnoreCase("femenino") || genero.equalsIgnoreCase("f") || genero.equalsIgnoreCase("masculino") || genero.equalsIgnoreCase("m")){
+                    break;
+                } else {
+                    System.out.println("Ingrese su genero (M/F): ");
+                    genero = (scanner.nextLine());
+                }
+            }
 
             System.out.println("Ingrese su edad: ");
             int edad = (scanner.nextInt());
@@ -29,8 +37,6 @@ public class MainEncuesta {
 
             personas.add(new Datos(nombre, apellido, genero, edad));
         }
-
-
 
         while(true) {
             //Printeamos la lista de opciones, que puedan seleccionar la opcion y dependiendo de la respuesta se vaya a un if o un else if, esto hacerlo dentro de un ciclo while para que puedan preguntar las veces que quieran
@@ -90,7 +96,7 @@ public class MainEncuesta {
     public static void imprimirCantidadHombres(List<Datos> personas){
         int cantidadMasculino = 0;
         for (Datos persona : personas) {
-            if (persona.getGenero().equalsIgnoreCase("masculino")) {
+            if (persona.getGenero().equalsIgnoreCase("masculino") || persona.getGenero().equalsIgnoreCase("m")) {
                 cantidadMasculino++;
             }
         }
@@ -100,7 +106,7 @@ public class MainEncuesta {
     public static void imprimirCantidadMujeres(List<Datos> personas){
         int cantidadFemenino = 0;
         for (Datos persona : personas) {
-            if (persona.getGenero().equalsIgnoreCase("femenino")) {
+            if (persona.getGenero().equalsIgnoreCase("femenino") || persona.getGenero().equalsIgnoreCase("f")) {
                 cantidadFemenino++;
             }
         }
