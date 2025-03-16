@@ -2,11 +2,16 @@
 ________
 ## Proyecto II - Encuesta.
 ________
-Juan Pedro Montoya V.
-Maria Camila Gómez Echeverry
-Codigo: PREICA2501B010016
+- Juan Pedro Montoya V.
 
-Docente: Julian Andres Loaiza Lopez.
+
+- Maria Camila Gómez Echeverry
+
+
+- Codigo: PREICA2501B010016
+
+
+- Docente: Julian Andres Loaiza Lopez.
 Medellin, Antioquia
 
 26/03/2025
